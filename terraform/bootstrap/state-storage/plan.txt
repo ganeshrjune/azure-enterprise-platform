@@ -1,0 +1,162 @@
+azurerm_resource_group.this: Refreshing state... [id=/subscriptions/da2718bc-194e-486e-9888-2570842e3239/resourceGroups/rg-aep-tfstate-001]
+azurerm_storage_account.this: Refreshing state... [id=/subscriptions/da2718bc-194e-486e-9888-2570842e3239/resourceGroups/rg-aep-tfstate-001/providers/Microsoft.Storage/storageAccounts/staeptfstate001]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # azurerm_storage_account.this is tainted, so must be replaced
+-/+ resource "azurerm_storage_account" "this" {
+      ~ access_tier                        = "Hot" -> (known after apply)
+      ~ id                                 = "/subscriptions/da2718bc-194e-486e-9888-2570842e3239/resourceGroups/rg-aep-tfstate-001/providers/Microsoft.Storage/storageAccounts/staeptfstate001" -> (known after apply)
+      ~ large_file_share_enabled           = false -> (known after apply)
+        name                               = "staeptfstate001"
+      ~ primary_access_key                 = (sensitive value)
+      ~ primary_blob_connection_string     = (sensitive value)
+      ~ primary_blob_endpoint              = "https://staeptfstate001.blob.core.windows.net/" -> (known after apply)
+      ~ primary_blob_host                  = "staeptfstate001.blob.core.windows.net" -> (known after apply)
+      + primary_blob_internet_endpoint     = (known after apply)
+      + primary_blob_internet_host         = (known after apply)
+      + primary_blob_microsoft_endpoint    = (known after apply)
+      + primary_blob_microsoft_host        = (known after apply)
+      ~ primary_connection_string          = (sensitive value)
+      ~ primary_dfs_endpoint               = "https://staeptfstate001.dfs.core.windows.net/" -> (known after apply)
+      ~ primary_dfs_host                   = "staeptfstate001.dfs.core.windows.net" -> (known after apply)
+      + primary_dfs_internet_endpoint      = (known after apply)
+      + primary_dfs_internet_host          = (known after apply)
+      + primary_dfs_microsoft_endpoint     = (known after apply)
+      + primary_dfs_microsoft_host         = (known after apply)
+      ~ primary_file_endpoint              = "https://staeptfstate001.file.core.windows.net/" -> (known after apply)
+      ~ primary_file_host                  = "staeptfstate001.file.core.windows.net" -> (known after apply)
+      + primary_file_internet_endpoint     = (known after apply)
+      + primary_file_internet_host         = (known after apply)
+      + primary_file_microsoft_endpoint    = (known after apply)
+      + primary_file_microsoft_host        = (known after apply)
+      ~ primary_location                   = "australiaeast" -> (known after apply)
+      ~ primary_queue_endpoint             = "https://staeptfstate001.queue.core.windows.net/" -> (known after apply)
+      ~ primary_queue_host                 = "staeptfstate001.queue.core.windows.net" -> (known after apply)
+      + primary_queue_microsoft_endpoint   = (known after apply)
+      + primary_queue_microsoft_host       = (known after apply)
+      ~ primary_table_endpoint             = "https://staeptfstate001.table.core.windows.net/" -> (known after apply)
+      ~ primary_table_host                 = "staeptfstate001.table.core.windows.net" -> (known after apply)
+      + primary_table_microsoft_endpoint   = (known after apply)
+      + primary_table_microsoft_host       = (known after apply)
+      ~ primary_web_endpoint               = "https://staeptfstate001.z8.web.core.windows.net/" -> (known after apply)
+      ~ primary_web_host                   = "staeptfstate001.z8.web.core.windows.net" -> (known after apply)
+      + primary_web_internet_endpoint      = (known after apply)
+      + primary_web_internet_host          = (known after apply)
+      + primary_web_microsoft_endpoint     = (known after apply)
+      + primary_web_microsoft_host         = (known after apply)
+      ~ secondary_access_key               = (sensitive value)
+      + secondary_blob_connection_string   = (sensitive value)
+      + secondary_blob_endpoint            = (known after apply)
+      + secondary_blob_host                = (known after apply)
+      + secondary_blob_internet_endpoint   = (known after apply)
+      + secondary_blob_internet_host       = (known after apply)
+      + secondary_blob_microsoft_endpoint  = (known after apply)
+      + secondary_blob_microsoft_host      = (known after apply)
+      ~ secondary_connection_string        = (sensitive value)
+      + secondary_dfs_endpoint             = (known after apply)
+      + secondary_dfs_host                 = (known after apply)
+      + secondary_dfs_internet_endpoint    = (known after apply)
+      + secondary_dfs_internet_host        = (known after apply)
+      + secondary_dfs_microsoft_endpoint   = (known after apply)
+      + secondary_dfs_microsoft_host       = (known after apply)
+      + secondary_file_endpoint            = (known after apply)
+      + secondary_file_host                = (known after apply)
+      + secondary_file_internet_endpoint   = (known after apply)
+      + secondary_file_internet_host       = (known after apply)
+      + secondary_file_microsoft_endpoint  = (known after apply)
+      + secondary_file_microsoft_host      = (known after apply)
+      + secondary_location                 = (known after apply)
+      + secondary_queue_endpoint           = (known after apply)
+      + secondary_queue_host               = (known after apply)
+      + secondary_queue_microsoft_endpoint = (known after apply)
+      + secondary_queue_microsoft_host     = (known after apply)
+      + secondary_table_endpoint           = (known after apply)
+      + secondary_table_host               = (known after apply)
+      + secondary_table_microsoft_endpoint = (known after apply)
+      + secondary_table_microsoft_host     = (known after apply)
+      + secondary_web_endpoint             = (known after apply)
+      + secondary_web_host                 = (known after apply)
+      + secondary_web_internet_endpoint    = (known after apply)
+      + secondary_web_internet_host        = (known after apply)
+      + secondary_web_microsoft_endpoint   = (known after apply)
+      + secondary_web_microsoft_host       = (known after apply)
+        tags                               = {
+            "Environment" = "Management"
+            "ManagedBy"   = "Terraform"
+            "Purpose"     = "Terraform Remote State"
+        }
+        # (23 unchanged attributes hidden)
+
+      ~ blob_properties (known after apply)
+      - blob_properties {
+          - change_feed_enabled           = false -> null
+          - change_feed_retention_in_days = 0 -> null
+          - last_access_time_enabled      = false -> null
+          - versioning_enabled            = false -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      ~ network_rules (known after apply)
+
+      ~ queue_properties (known after apply)
+      - queue_properties {
+          - hour_metrics {
+              - enabled               = false -> null
+              - include_apis          = false -> null
+              - retention_policy_days = 0 -> null
+              - version               = "1.0" -> null
+            }
+          - logging {
+              - delete                = false -> null
+              - read                  = false -> null
+              - retention_policy_days = 0 -> null
+              - version               = "1.0" -> null
+              - write                 = false -> null
+            }
+          - minute_metrics {
+              - enabled               = false -> null
+              - include_apis          = false -> null
+              - retention_policy_days = 0 -> null
+              - version               = "1.0" -> null
+            }
+        }
+
+      ~ routing (known after apply)
+
+      ~ share_properties (known after apply)
+      - share_properties {
+          - retention_policy {
+              - days = 7 -> null
+            }
+        }
+
+      ~ static_website (known after apply)
+    }
+
+  # azurerm_storage_container.terraform_state will be created
+  + resource "azurerm_storage_container" "terraform_state" {
+      + container_access_type             = "private"
+      + default_encryption_scope          = (known after apply)
+      + encryption_scope_override_enabled = true
+      + has_immutability_policy           = (known after apply)
+      + has_legal_hold                    = (known after apply)
+      + id                                = (known after apply)
+      + metadata                          = (known after apply)
+      + name                              = "terraform-state"
+      + resource_manager_id               = (known after apply)
+      + storage_account_id                = (known after apply)
+      + url                               = (known after apply)
+    }
+
+Plan: 2 to add, 0 to change, 1 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
