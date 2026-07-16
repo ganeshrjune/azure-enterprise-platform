@@ -22,6 +22,10 @@ resource "azurerm_storage_account" "this" {
 
   allow_nested_items_to_be_public = false
 
+  public_network_access_enabled = false
+
+  shared_access_key_enabled = true
+
   tags = {
     Environment = "Management"
     Purpose     = "Terraform Remote State"
@@ -36,3 +40,4 @@ resource "azurerm_storage_container" "terraform_state" {
 
   container_access_type = "private"
 }
+
