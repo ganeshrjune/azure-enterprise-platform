@@ -18,3 +18,20 @@ module "networking" {
     Owner       = "Ganesh"
   }
 }
+
+module "storage" {
+  source = "../../modules/storage"
+
+  storage_account_name = "staepdev001"
+
+  resource_group_name = "rg-aep-dev-001"
+
+  location = "Australia East"
+
+  tags = {
+    Environment = "Development"
+    Project     = "Azure Enterprise Platform"
+    ManagedBy   = "Terraform"
+    Owner       = "Ganesh"
+  }
+}
