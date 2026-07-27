@@ -1,5 +1,9 @@
 name: Terraform CI
 
+permissions:
+  id-token: write
+  contents: read
+
 on:
   pull_request:
     branches:
@@ -23,6 +27,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Azure Login
+      uses: azure/login@v2
+      with:
+        client-id: 8d19e01d-6078-4e37-acba-89ca0c2f6072
+        tenant-id: 5568e7d3-afa4-4e4c-8a43-3740bd531234
+        subscription-id: da2718bc-194e-486e-9888-2570842e3239
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
